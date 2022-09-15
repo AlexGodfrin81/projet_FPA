@@ -1,3 +1,16 @@
 nav>ul {
     list-style: none;
 }
+
+#logo {
+    background: url(/images/logo.png) 0 0 no-repeat;
+    width: 96px;
+    height: 96px;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+a {
+    margin: 12px;
+    
+}
