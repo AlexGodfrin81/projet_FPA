@@ -3,14 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { RetourMedecinComponent } from './component/retour-medecin/retour-medecin.component';
+import { InfoPatientComponent } from './component/info-patient/info-patient.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RetourMedecinComponent,
+    InfoPatientComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
