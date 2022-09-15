@@ -1,0 +1,8 @@
+form>div {
+    padding: 2px 2px 2px 2px;
+    margin: 2px 2px 2px 2px;
+}
+
+label {
+    padding-right: 4px;
+}
