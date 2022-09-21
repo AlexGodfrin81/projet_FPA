@@ -74,13 +74,34 @@ export class InfoPatientComponent implements OnInit {
         }
       ]
     }
-    this.fhirService.postCondition(JSON.stringify(newCondition)).subscribe(data => {
-      const table : any = document.getElementById('table_condition');
-      if (table != null) {
-        
-      }
-    })
-    
+    this.fhirService.postCondition(JSON.stringify(newCondition)).subscribe((data : any) => {
+      document.location.reload();
+    }) 
   }
 
+  deleteConditions() {
+    let conditions_delete : any = []
+    let checkboxes : any = document.getElementsByClassName('checkboxes');
+    let cpt = 0;
+    if (checkboxes != null) {
+      for (let checkbox of checkboxes) {
+        if (checkbox.checked){
+          conditions_delete.push(checkbox.id);
+          cpt++;
+        }
+      }
+      if (cpt === 0) {
+        alert("Veuillez selectionner au moins une déclaration !");
+      } else {
+        for (let idCondition of conditions_delete) {
+          this.fhirService.deleteCondition(idCondition).subscribe(data => {
+            cpt--;
+            if(cpt===0){
+              document.location.reload();
+            }
+          });
+        }
+      }
+    }
+  }
 }

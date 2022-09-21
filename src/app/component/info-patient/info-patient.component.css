@@ -45,10 +45,6 @@ label {
     cursor: pointer;
 }
 
-#poubelle {
-    opacity: 20%;
-}
-
 table {
     background-image: url("../../../assets/3.png");
     width: 75%;

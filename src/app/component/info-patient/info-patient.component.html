@@ -2,7 +2,7 @@
     <div id="div0"><h1> Vos déclarations </h1></div>
     <div id="div1"><h2> Demander un rendez-vous </h2></div>
     <div id="div2"><img (click)="addNewCondition()" class="icone" id="bouton_plus" src="../../../assets/bouton_plus.png" /></div>
-    <div id="div3"><img class="icone" id="poubelle" src="../../../assets/poubelle.png" /></div>
+    <div id="div3"><img (click)="deleteConditions()" class="icone" id="poubelle" src="../../../assets/poubelle.png" /></div>
 </div>
 
 <div id="add_declaration">
@@ -35,7 +35,7 @@
                 <th>
                     <div>
                         <label for="appointement_selected">Rendez-vous ?</label>
-                        <input type="checkbox"/>
+                        <input type="checkbox" />
                     </div>
                 </th>
                 <th>
@@ -48,31 +48,33 @@
     </form>
 </div>
 
-<div *ngFor="let condition of conditions">
-        <table id="table_condition">
-            <tr class="row">
-                <th>
-                    <div>
-                        <label for="condition_date_id">Date : {{condition.recordedDate}}</label>
-                    </div>
-                </th>
-                <th>
-                    <div>
-                        <label for="condition_selector_id">Type&nbsp;: {{condition.code.text}}</label>
-                    </div>
-                </th>
-                <th>
-                    <div>
-                        <label for="condition_description_id">Description : {{condition.note[0].text}}</label>
-                    </div>
-                </th>
-                <th>
-                    <div>
-                        <input type="checkbox" />
-                    </div>
-                </th>
-            </tr>
-        </table>
+<div id="insert_new_condition">
+    <div id="table_condition" *ngFor="let condition of conditions">
+            <table>
+                <tr class="row">
+                    <th>
+                        <div>
+                            <label for="condition_date_id">Date : {{condition.recordedDate}}</label>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <label for="condition_selector_id">Type&nbsp;: {{condition.code.text}}</label>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <label for="condition_description_id">Description : {{condition.note[0].text}}</label>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <input class="checkboxes" type="checkbox" [id]="condition.id" />
+                        </div>
+                    </th>
+                </tr>
+            </table>
+    </div>
 </div>
 
 <!--  -->

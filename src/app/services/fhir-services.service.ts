@@ -9,7 +9,7 @@ export class FhirServicesService {
   constructor(private httpClient : HttpClient) { }
   private urlPractitioner = "https://fhir.alliance4u.io/api/practitioner/"; 
   private urlPatient = "https://fhir.alliance4u.io/api/patient/";
-  private urlCondition = "https://fhir.alliance4u.io/api/condition";
+  private urlCondition = "https://fhir.alliance4u.io/api/condition/";
   private urlConditionForPatient =  'https://fhir.alliance4u.io/api/condition?subject.reference=Patient/';
   private urlAppointment = "https://fhir.alliance4u.io/api/appointment"
 
