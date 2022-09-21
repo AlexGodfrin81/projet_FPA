@@ -11,7 +11,8 @@ form>div {
 #header_declaration {
     width: 75%;
     display: flex;
-    padding: 0% 0% 0% 3%;
+    padding: 0% 0% 0% 10%;
+    margin-top: 2.5%;
 }
 
 #div0 {
@@ -48,9 +49,9 @@ label {
 table {
     background-image: url("../../../assets/3.png");
     width: 75%;
-    margin: 0% 0% 0% 3%;
+    margin: 0% 0% 0% 10%;
     padding: 1%;
-    margin-bottom: 1%;
+    margin-bottom: 0.2%;
     
     /* border: 1px solid; */
     font-size: 150%;

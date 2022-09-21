@@ -52,17 +52,17 @@
     <div id="table_condition" *ngFor="let condition of conditions">
             <table>
                 <tr class="row">
-                    <th>
+                    <th class="column">
                         <div>
                             <label for="condition_date_id">Date : {{condition.recordedDate}}</label>
                         </div>
                     </th>
-                    <th>
+                    <th class="column">
                         <div>
                             <label for="condition_selector_id">Type&nbsp;: {{condition.code.text}}</label>
                         </div>
                     </th>
-                    <th>
+                    <th class="column">
                         <div>
                             <label for="condition_description_id">Description : {{condition.note[0].text}}</label>
                         </div>
