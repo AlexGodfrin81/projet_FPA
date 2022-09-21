@@ -17,7 +17,7 @@ export class FhirServicesService {
     }
 
     getConditionForPatient(idPatient: string) {
-        return this.httpClient.get( this.urlConditionForPatient + idPatient);
+        return this.httpClient.get( this.urlConditionForPatient + idPatient +"&recorder.display=Patient");
     }
 
     postCondition(newCondition : any) {
