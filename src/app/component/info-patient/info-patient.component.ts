@@ -23,10 +23,6 @@ export class InfoPatientComponent implements OnInit {
     });
   }
 
-  onSubmitCondition(form : NgForm) {
-    console.log(form.value);
-  }
-
   addNewCondition() : void {
     const box = document.getElementById('add_declaration');
     if (box != null){
@@ -34,19 +30,39 @@ export class InfoPatientComponent implements OnInit {
     }
   }
 
+  addAppointment() {
+    this.fhirService.postAppointment(
+      {
+        "resourceType": "Appointment",
+        "status": "waitlist",
+        "participant": [
+          {
+            "actor": {
+              "type": "Patient",
+              "identifier": {
+                "value": "6321e71ed83022001917f14c"
+              }
+            }
+          }
+
+        ]
+      }).subscribe(data => {
+        document.location.reload();
+      })
+  }
+
   submitCondition() : void{
-    const date : any = document.getElementById("condition_date_id");
-    const code : any = document.getElementById("condition_selector_id");
-    const description : any = document.getElementById("condition_description_id");
-    if (date != null) {
-      console.log(date.value);
+    let date : any = document.getElementById("condition_date_id");
+    let code : any = document.getElementById("condition_selector_id");
+    let description : any = document.getElementById("condition_description_id");
+    if (date.value == "") {
+      alert("Veuillez entrer une date !");
     }
-    if (code != null) {
-      console.log(code.value);
-      console.log(code.options[code.selectedIndex].text);
+    if (code.value == "") {
+      alert("Veuillez sélecionner un type d'accident !");
     }
-    if (description != null) {
-      console.log(description.value);
+    if (description.value == "") {
+      alert("Veuillez décrire votre accident !")
     }
     let newCondition = {
       resourceType: "Condition",
@@ -75,7 +91,12 @@ export class InfoPatientComponent implements OnInit {
       ]
     }
     this.fhirService.postCondition(JSON.stringify(newCondition)).subscribe((data : any) => {
-      document.location.reload();
+      let is_RDV:any = document.getElementById("appointement_checkbox");
+      if(is_RDV.checked == true){
+        this.addAppointment();
+      }else{
+        document.location.reload();
+      }
     }) 
   }
 
