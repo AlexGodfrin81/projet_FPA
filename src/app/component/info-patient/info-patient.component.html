@@ -35,7 +35,7 @@
                 <th>
                     <div>
                         <label for="appointement_selected">Rendez-vous ?</label>
-                        <input type="checkbox" />
+                        <input id="appointement_checkbox" type="checkbox" />
                     </div>
                 </th>
                 <th>
@@ -52,19 +52,19 @@
     <div id="table_condition" *ngFor="let condition of conditions">
             <table>
                 <tr class="row">
-                    <th class="column">
+                    <th >
                         <div>
-                            <label for="condition_date_id">Date : {{condition.recordedDate}}</label>
+                            <label class="column" for="condition_date_id">Date : {{condition.recordedDate}}</label>
                         </div>
                     </th>
-                    <th class="column">
+                    <th >
                         <div>
-                            <label for="condition_selector_id">Type&nbsp;: {{condition.code.text}}</label>
+                            <label class="column" for="condition_selector_id">Type&nbsp;: {{condition.code.text}}</label>
                         </div>
                     </th>
-                    <th class="column">
+                    <th >
                         <div>
-                            <label for="condition_description_id">Description : {{condition.note[0].text}}</label>
+                            <label class="column" for="condition_description_id">Description : {{condition.note[0].text}}</label>
                         </div>
                     </th>
                     <th>
