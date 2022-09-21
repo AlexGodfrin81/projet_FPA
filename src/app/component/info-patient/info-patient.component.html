@@ -1,4 +1,11 @@
-<h1>Vos déclarations : </h1>
+<div id="header_declaration">
+    <div id="div0"><h1> Vos déclarations </h1></div>
+    <div id="div1"><h2> Demander un rendez-vous </h2></div>
+    <div id="div2"><img id="bouton_plus" src="../../../assets/bouton_plus.png" /></div>
+    <div id="div3"><img id="poubelle" src="../../../assets/poubelle.png" /></div>
+</div>
+
+
 <form action="/infoPatient" method="post">
     <table>
         <tr>
@@ -21,10 +28,12 @@
             <th>
                 <div>
                     <label for="incident_description_id">Description :</label>
-                    <textarea id="incident_description_id" name="incident_description"></textarea>
+                    <input id="incident_description_id" name="incident_description" />
                 </div>
+            </th>
+            <th>
                 <div>
-                    <button type="submit">Envoyer les informations</button>
+                    <button type="submit">Valider</button>
                 </div>
             </th>
         </tr>

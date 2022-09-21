@@ -3,6 +3,23 @@ form>div {
     margin: 2px 2px 2px 2px;
 }
 
+#header_declaration {
+    border: 1px solid;
+    display: flex;
+    padding: 2% 2% 2% 0%;
+}
+
 label {
     padding-right: 4px;
+}
+
+#bouton_plus {
+    width: 2%;
+    height: 2%;
+}
+
+#poubelle {
+    width: 2%;
+    height: 2%;
+    opacity: 20%;
 }
