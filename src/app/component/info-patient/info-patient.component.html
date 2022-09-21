@@ -1,21 +1,32 @@
+<h1>Vos déclarations : </h1>
 <form action="/infoPatient" method="post">
-    <div>
-        <label for="incident_date_id">Date :</label>
-        <input type="date" id="incident_date_id" name="incident_date">
-    </div>
-    <div>
-        <label for="incident_selector_id">Type&nbsp;:</label>
-        <select id="incident_selector_id" name="incident_selector">
-            <option>--- Selectionnez un élement ---</option>
-            <option>Miaou</option>
-            <option>UwU</option>
-        </select> 
-    </div>
-    <div>
-        <label for="incident_description_id">Description :</label>
-        <textarea id="incident_description_id" name="incident_description"></textarea>
-    </div>
-    <div>
-        <button type="submit">Envoyer les informations</button>
-    </div>
+    <table>
+        <tr>
+            <th>
+                <div>
+                    <label for="incident_date_id">Date :</label>
+                    <input type="date" id="incident_date_id" name="incident_date">
+                </div>
+            </th>
+            <th>
+                <div>
+                    <label for="incident_selector_id">Type&nbsp;:</label>
+                    <select id="incident_selector_id" name="incident_selector">
+                        <option>--- Selectionnez un élement ---</option>
+                        <option>Miaou</option>
+                        <option>UwU</option>
+                    </select> 
+                </div>
+            </th>
+            <th>
+                <div>
+                    <label for="incident_description_id">Description :</label>
+                    <textarea id="incident_description_id" name="incident_description"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Envoyer les informations</button>
+                </div>
+            </th>
+        </tr>
+    </table>
 </form>
