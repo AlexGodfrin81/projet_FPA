@@ -1,8 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 form>div {
     padding: 2px 2px 2px 2px;
     margin: 2px 2px 2px 2px;
 }
 
+#header_declaration {
+    width: 75%;
+    display: flex;
+    padding: 0% 0% 0% 3%;
+}
+
+#div0 {
+    width: 25%;
+    font-size: 75%;
+    padding-right: 40%;
+}
+
+#div1 {
+    width: 25%;
+    display: inline;
+    font-size: 75%;
+    /* padding-left: 25%;*/
+}
+
+#div2 {
+    width: 10%;
+}
+
+#div3 {
+    width: 10%
+}
+
 label {
     padding-right: 4px;
+}
+
+.icone{
+    width: 40px;
+    height: 40px;
+}
+
+#poubelle {
+    opacity: 20%;
+}
+
+table {
+    background-image: url("../../../assets/3.png");
+    width: 75%;
+    margin: 0% 0% 0% 3%;
+    padding: 1%; 
+    /* border: 1px solid; */
+    font-size: 150%;
+}
+
+.column {
+    /* padding-right: 1%; */
+    background-color: white;
+    /* padding: ; */
 }

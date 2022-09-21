@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-const urlEvent = "https://fhir.alliance4u.io/api/account/";
+import { FhirServicesService } from './services/fhir-services.service';
+import codeJSON from "../assets/code.json";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,70 +9,29 @@ const urlEvent = "https://fhir.alliance4u.io/api/account/";
 })
 export class AppComponent {
   title = 'FPA';
+ 
+  idPatient : string = "6321e71ed83022001917f14c";
+  patient:any;
+  conditions : any;
+  practitioner:any; 
+  code:any;
+  constructor(private fhirService : FhirServicesService){
+
+  }
+  ngOnInit(): void{
+    this.code = codeJSON;
+    console.log(this.code);
+    this.fhirService.getConditionForPatient(this.idPatient).subscribe(data => {
+      this.conditions = data;
+      console.log(this.conditions);
+    });
+    this.fhirService.getPatient(this.idPatient).subscribe(data => {
+      this.patient = data;
+      console.log(this.patient)
+      this.fhirService.getPractitioner(this.patient.generalPractitioner[0].reference).subscribe(data =>{
+        this.practitioner = data;
+        console.log(this.practitioner)
+      })
+    })
+  }
 }
-
-
-// function getEvent(idPatient:string){
-//   let result : any[]; 
-//   $.ajax(
-//     {
-//       type:"GET",
-//       url:urlEvent,
-//       contentType: 'application/json',
-//       dataType:"json",
-//       success:(data)=>{
-//         for(let d of data){
-//           if(d.subject.reference === idPatient && d.subject.type === "Patient"){
-//             result.push(d);
-//           }
-//         }
-//         return result;
-//       },
-//       error:(e)=>{
-//         console.log(e)
-//       }
-//     }
-//   )
-// }
-
-// function postEvent(newEvent:any){
-//   $.ajax(
-//     {
-//       type:"POST",
-//       url:urlEvent,
-//       contentType: 'application/json',
-//       data:JSON.stringify(newEvent),
-//       success:(data)=>{
-//         console.log("Envoi de l'événement réussi !");
-//         return data;
-//       },
-//       error:(e)=>{
-//         console.log(e)
-//       }
-//     }
-//   )
-
-// }
-
-// function putEvent(newEvent:any){
-//   $.ajax(
-//     {
-//       type:"PUT",
-//       url:urlEvent+newEvent.id,
-//       contentType: 'application/json',
-//       data:JSON.stringify(newEvent),
-//       success:(data)=>{
-//         console.log("Modification de l'événement réussi !");
-//         return data;
-//       },
-//       error:(e)=>{
-//         console.log(e)
-//       }
-//     }
-//   )
-// }
-
-// function postRDV(){
-
-// }
-
