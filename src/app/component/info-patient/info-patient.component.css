@@ -42,6 +42,7 @@ label {
 .icone{
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 #poubelle {
@@ -52,9 +53,15 @@ table {
     background-image: url("../../../assets/3.png");
     width: 75%;
     margin: 0% 0% 0% 3%;
-    padding: 1%; 
+    padding: 1%;
+    margin-bottom: 1%;
+    
     /* border: 1px solid; */
     font-size: 150%;
+}
+
+#add_declaration {
+    display: none;
 }
 
 .column {

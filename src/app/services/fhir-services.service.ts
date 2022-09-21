@@ -28,11 +28,11 @@ export class FhirServicesService {
     }
 
     postCondition(newCondition : any) {
-      return this.httpClient.post(this.urlCondition, newCondition);
+      return this.httpClient.post(this.urlCondition, newCondition,{headers : new HttpHeaders({ 'Content-Type': 'application/json' })});
     }
 
     putCondition(newCondition: any) {
-      return this.httpClient.put(this.urlCondition + newCondition.id, newCondition);
+      return this.httpClient.put(this.urlCondition + newCondition.id, newCondition,{headers : new HttpHeaders({ 'Content-Type': 'application/json' })});
     }
     
     //Ressource Practitioner
@@ -42,6 +42,6 @@ export class FhirServicesService {
 
     //Ressource appointment
     postAppointment(newAppointment:any){
-      return this.httpClient.post(this.urlAppointment,newAppointment )
+      return this.httpClient.post(this.urlAppointment,newAppointment,{headers : new HttpHeaders({ 'Content-Type': 'application/json' })} )
     }
 }

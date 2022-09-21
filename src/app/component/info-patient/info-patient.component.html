@@ -1,41 +1,78 @@
 <div id="header_declaration">
     <div id="div0"><h1> Vos déclarations </h1></div>
     <div id="div1"><h2> Demander un rendez-vous </h2></div>
-    <div id="div2"><img class="icone" id="bouton_plus" src="../../../assets/bouton_plus.png" /></div>
+    <div id="div2"><img (click)="addNewCondition()" class="icone" id="bouton_plus" src="../../../assets/bouton_plus.png" /></div>
     <div id="div3"><img class="icone" id="poubelle" src="../../../assets/poubelle.png" /></div>
 </div>
 
+<div id="add_declaration">
+    <!-- <form #conditionform="ngForm" (ngsubmit)="onSubmitCondition(conditionform)" action="/infoPatient"> -->
+    <form action="/infoPatient">
 
-<form action="/infoPatient" method="post">
-    <table>
-        <tr class="row">
-            <th class="column">
-                <div>
-                    <label for="incident_date_id">Date :</label>
-                    <input type="date" id="incident_date_id" name="incident_date">
-                </div>
-            </th>
-            <th class="column">
-                <div>
-                    <label for="incident_selector_id">Type&nbsp;:</label>
-                    <select id="incident_selector_id" name="incident_selector">
-                        <option>--- Selectionnez un élement ---</option>
-                        <option>Miaou</option>
-                        <option>UwU</option>
-                    </select> 
-                </div>
-            </th>
-            <th class="column">
-                <div>
-                    <label for="incident_description_id">Description :</label>
-                    <input id="incident_description_id" name="incident_description" />
-                </div>
-            </th>
-            <th>
-                <div>
-                    <button type="submit">Valider</button>
-                </div>
-            </th>
-        </tr>
-    </table>
-</form>
+        <table>
+            <tr class="row">
+                <th>
+                    <div>
+                        <label for="condition_date_id">Date :</label>
+                        <input type="date" id="condition_date_id" name="condition_date">
+                    </div>
+                </th>
+                <th>
+                    <div>
+                        <label for="condition_selector_id">Type&nbsp;:</label>
+                        <select id="condition_selector_id" name="condition_selector">
+                            <option>--- Selectionnez un élement ---</option>
+                            <option *ngFor="let code of codes" [value]="code.code"> {{code.libelle}} </option>
+                        </select> 
+                    </div>
+                </th>
+                <th>
+                    <div>
+                        <label for="condition_description_id">Description :</label>
+                        <input id="condition_description_id" name="condition_description" />
+                    </div>
+                </th>
+                <th>
+                    <div>
+                        <label for="appointement_selected">Rendez-vous ?</label>
+                        <input type="checkbox"/>
+                    </div>
+                </th>
+                <th>
+                    <div>
+                        <button type="submit" (click)="submitCondition()">Valider</button>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div *ngFor="let condition of conditions">
+        <table id="table_condition">
+            <tr class="row">
+                <th>
+                    <div>
+                        <label for="condition_date_id">Date : {{condition.recordedDate}}</label>
+                    </div>
+                </th>
+                <th>
+                    <div>
+                        <label for="condition_selector_id">Type&nbsp;: {{condition.code.text}}</label>
+                    </div>
+                </th>
+                <th>
+                    <div>
+                        <label for="condition_description_id">Description : {{condition.note[0].text}}</label>
+                    </div>
+                </th>
+                <th>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </th>
+            </tr>
+        </table>
+</div>
+
+<!--  -->
