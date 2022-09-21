@@ -11,13 +11,20 @@ export class FhirServicesService {
   private urlPatient = "https://fhir.alliance4u.io/api/patient/";
   private urlCondition = "https://fhir.alliance4u.io/api/condition";
   private urlConditionForPatient =  'https://fhir.alliance4u.io/api/condition?subject.reference=Patient/';
+  private urlAppointment = "https://fhir.alliance4u.io/api/appointment"
 
+    //Ressource patient
     getPatient(idPatient : string) {
       return this.httpClient.get(this.urlPatient + idPatient);
     }
 
+    //Ressource condition
     getConditionForPatient(idPatient: string) {
         return this.httpClient.get( this.urlConditionForPatient + idPatient +"&recorder.display=Patient");
+    }
+
+    getConditionForPatientRDV(idPatient: string){
+      return this.httpClient.get( this.urlConditionForPatient + idPatient +"&recorder.display=Practitioner");
     }
 
     postCondition(newCondition : any) {
@@ -27,8 +34,14 @@ export class FhirServicesService {
     putCondition(newCondition: any) {
       return this.httpClient.put(this.urlCondition + newCondition.id, newCondition);
     }
-
+    
+    //Ressource Practitioner
     getPractitioner(idPractitioner: String){
       return this.httpClient.get(this.urlPractitioner + idPractitioner )
+    }
+
+    //Ressource appointment
+    postAppointment(newAppointment:any){
+      return this.httpClient.post(this.urlAppointment,newAppointment )
     }
 }
