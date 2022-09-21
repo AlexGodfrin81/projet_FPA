@@ -1,0 +1,214 @@
+[
+    {
+        "code": 160245001,
+        "libelle": "Pas de problème ou diysfonctionnement actuel"
+    },
+    {
+        "code": 4665007,
+        "libelle": "Respiration costale"
+    },
+    {
+        "code": 4654002,
+        "libelle": "Changement de couleur postruptif de la dent"
+    },
+    {
+        "code": 4639008,
+        "libelle": "Glaires"
+    },
+    {
+        "code": 4568003,
+        "libelle": "Douleur thoracique"
+    },
+    {
+        "code": 2134003,
+        "libelle": "Douleur diffuse "
+    },
+    {
+        "code": 2216005,
+        "libelle": "Emission nocturne"
+    },
+    {
+        "code": 2239004,
+        "libelle": "Grossesses antérieures"
+    },
+    {
+        "code": 2245007,
+        "libelle": "Corps étranger dans le nasopharynx"
+    },
+    {
+        "code": 2268003,
+        "libelle": "Victime d'agression homosexuelle"
+    },
+    {
+        "code": 2419001,
+        "libelle": "Plaie ouverte du front avec complication "
+    },
+    {
+        "code": 2630008,
+        "libelle": "Plaie ouverte du doigt sans complication "
+    },
+    {
+        "code": 2733002,
+        "libelle": "Douleur au talon "
+    },
+    {
+        "code": 2776000,
+        "libelle": "Délire "
+    },
+    {
+        "code": 2790002,
+        "libelle": "Niveau de déficience: un œil : déficience totale : autre œil : non spécifié"
+    },
+    {
+        "code": 2919008,
+        "libelle": "Nausées, vomissements et diarrhée "
+    },
+    {
+        "code": 2999009,
+        "libelle": "Blessure à l'oreille "
+    },
+    {
+        "code": 2492009,
+        "libelle": "Trouble nutritionnel"
+    },
+    {
+        "code": 2129002,
+        "libelle": "Œdème du pharynx"
+    },
+    {
+        "code": 2121004,
+        "libelle": "Empoisonnement par l'éthopropazine "
+    },
+    {
+        "code": 2120003,
+        "libelle": "Cri faible "
+    },
+    {
+        "code": 2070002,
+        "libelle": "Sensation de brûlure dans l'œil "
+    },
+    {
+        "code": 2073000,
+        "libelle": "Illusions "
+    },
+    {
+        "code": 2061000,
+        "libelle": "Perte auditive de transmission des sites combinés "
+    },
+    {
+        "code": 2043009,
+        "libelle": "Gastrite alcoolique "
+    },
+    {
+        "code": 1980003,
+        "libelle": "Otite moyenne séromuineuse "
+    },
+    {
+        "code": 1965009,
+        "libelle": "Ph  normal de la peau "
+    },
+    {
+        "code": 1977004,
+        "libelle": "Empoisonnement par l'oxymétholone "
+    },
+    {
+        "code": 1955003,
+        "libelle": "Fossette préauriculaire "
+    },
+    {
+        "code": 1943009,
+        "libelle": "Confusion gauche-droite "
+    },
+    {
+        "code": 1909000,
+        "libelle": "Niveau de déficience : meilleur œil : déficience sévère : œil inférieur : déficience quasi-totale"
+    },
+    {
+        "code": 1881003,
+        "libelle": "Augmentation des besoins nutritionnels"
+    },
+    {
+        "code": 1848004,
+        "libelle": "Empoisonnement par anesthésique gazeux"
+    },
+    {
+        "code": 1826005,
+        "libelle": "Granulome de la lèvre"
+    },
+    {
+        "code": 1703007,
+        "libelle": "Augmentation de la circonférence des jambes "
+    },
+    {
+        "code": 1534008,
+        "libelle": "Paralysie du regard conjugué "
+    },
+    {
+        "code": 1525003,
+        "libelle": "Ampoule du pied sans infection"
+    },
+    {
+        "code": 1521007,
+        "libelle": "Ampoule de fesses sans infection "
+    },
+    {
+        "code": 1482004,
+        "libelle": "Chalazion"
+    },
+    {
+        "code": 1475003,
+        "libelle": "Herpès labial"
+    },
+    {
+        "code": 1412008,
+        "libelle": "Cataracte polaire sous-capsulaire antérieure"
+    },
+    {
+        "code": 1380006,
+        "libelle": "Agoraphobie sans antécédents "
+    },
+    {
+        "code": 1370007,
+        "libelle": "Fractrure ouverte de l'os métacarpien "
+    },
+    {
+        "code": 1152001,
+        "libelle": "Réaction cutanée négative "
+    },
+    {
+        "code": 1152008,
+        "libelle": "Constriction généralisée du champ visuel "
+    },
+    {
+        "code": 1126007,
+        "libelle": "Verrouillage du genou "
+    },
+    {
+        "code": 1108009,
+        "libelle": "Alopécie féminine "
+    },
+    {
+        "code": 1023001,
+        "libelle": "Apnée "
+    },
+    {
+        "code": 928000,
+        "libelle": "Trouble du système musculo-squelettique "
+    },
+    {
+        "code": 890002,
+        "libelle": "Brûlure profonde du coude au troisième degré "
+    },
+    {
+        "code": 849000,
+        "libelle": "Cataracte totale "
+    },
+    {
+        "code": 818005,
+        "libelle": "Brûlure au troisième degré de plusieurs sites du membre inférieur "
+    },
+    {
+        "code": 825003,
+        "libelle": "Lésion superficielle de l'aisselle avec infection"
+    }
+]
