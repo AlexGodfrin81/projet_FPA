@@ -34,6 +34,10 @@ export class FhirServicesService {
     putCondition(newCondition: any) {
       return this.httpClient.put(this.urlCondition + newCondition.id, newCondition,{headers : new HttpHeaders({ 'Content-Type': 'application/json' })});
     }
+
+    deleteCondition(idCondition:string){
+      return this.httpClient.delete(this.urlCondition + idCondition);
+    }
     
     //Ressource Practitioner
     getPractitioner(idPractitioner: String){
@@ -44,4 +48,6 @@ export class FhirServicesService {
     postAppointment(newAppointment:any){
       return this.httpClient.post(this.urlAppointment,newAppointment,{headers : new HttpHeaders({ 'Content-Type': 'application/json' })} )
     }
+
+
 }

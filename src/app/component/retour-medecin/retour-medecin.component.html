@@ -1,45 +1,11 @@
-<body>
-   <div class="bg"> </div>
-   <div class="container">
-       <div class="cmptr1">
-           <div class="loop">
-               <img src="../../../assets/list-icon.png" class="icon">
-               
-           </div>
-           <h5 class="date_cmptr"> Date :  11/07/2022</h5>
-           <h6 class="description"> Description: CR mauvaise dose médicament</h6>
-
-       </div>
-       
-       <div class="cmptr1">
+<div class="bg"> </div>
+<div class="container">
+    <div class="cmptr1" *ngFor="let condition of conditions">
         <div class="loop">
             <img src="../../../assets/list-icon.png" class="icon">
-            
-        </div>
-        <h5 class="date_cmptr"> Date :  11/07/2022</h5>
-        <h6 class="description"> Description: CR mauvaise dose médicament</h6>
 
-    </div>
-    <div class="cmptr1">
-        <div class="loop">
-            <img src="../../../assets/list-icon.png" class="icon">
-            
         </div>
-        <h5 class="date_cmptr"> Date :  11/07/2022</h5>
-        <h6 class="description"> Description: CR mauvaise dose médicament</h6>
-
+        <h5 class="date_cmptr"> Date : {{condition.recordedDate}} </h5>
+        <h6 class="description"> Description: {{condition.note[0].text}}</h6>
     </div>
-    <div class="cmptr1">
-        <div class="loop">
-            <img src="../../../assets/list-icon.png" class="icon">
-            
-        </div>
-        <h5 class="date_cmptr"> Date: 11/07/2022</h5>
-        <h6 class="description"> Description: CR mauvaise dose médicament</h6>
-
-    </div>
-    
-    
-   </div>
-    
-</body>
+</div>
