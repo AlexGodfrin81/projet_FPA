@@ -1,10 +1,17 @@
-<img id="logo" src="../assets/IMG_7231.png"> 
-<tr> 
-  <td> <a routerLink="/infoPatient">Info Patient</a> </td>
-  <td> <a routerLink="/retourMedecin">Retour Médecin</a> </td>
-  <td> <a routerLink="/">Retour page principal</a> </td>
-</tr>
+<body>
+   
+<div class="header"> 
+
+    <img style="float: left;" id="logo" src="../assets/IMG_7231.png">
+
+        <a  routerLink="/infoPatient"> <img src="../assets/menu_icon.png" id="img-vmd" alt=""><span>Voir Mes Déclarations</span></a>
+        <a  routerLink="/retourMedecin"> <img src="../assets/icon-medcin.png" id="img-mem" alt="">  <span>  Espace Médical </span> </a> 
+   
+
+</div>
+
 
 <h2>Component display :</h2>
 <router-outlet></router-outlet>
 
+</body>
